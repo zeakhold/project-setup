@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "precommit": "eslint --fix"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": [
