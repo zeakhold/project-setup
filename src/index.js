@@ -1,1 +1,4 @@
-wx.navigateTo()
+function a () {
+    console.error('sss')
+}
+a()
