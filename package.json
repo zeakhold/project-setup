@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "eslint --fix"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --quiet --cache --fix",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -15,16 +21,5 @@
     "eslint-plugin-import": "^2.23.4",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node build/commit-msg.js"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --quiet --cache --fix",
-      "git add"
-    ]
   }
 }
